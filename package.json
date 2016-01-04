@@ -1,0 +1,29 @@
+{
+  "name": "moom",
+  "version": "0.0.0",
+  "description": "Web-based mixing softwre for DJs",
+  "main": "main.js",
+  "scripts": {
+    "start": "echo plop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "smeuh.org:git/moom.git"
+  },
+  "author": "Alex Marandon",
+  "license": "AGPL",
+  "dependencies": {
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "html-webpack-plugin": "^1.7.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}

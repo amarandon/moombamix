@@ -1,0 +1,8 @@
+# Build
+dist
+
+# NPM
+node_modules
+
+# Vim
+*.sw?
