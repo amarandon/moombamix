@@ -4,6 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/js/main.js',
   output: {path: 'dist', filename: 'bundle.js'},
+  devtool: 'source-map',
   module: {
     loaders: [
       {
