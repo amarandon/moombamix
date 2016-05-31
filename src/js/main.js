@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../scss/main.scss';
+import PlayList from './components/PlayList';
 
 
 var Player = React.createClass({
@@ -10,37 +11,6 @@ var Player = React.createClass({
       <h2>{track.title}</h2>
       <audio onPlay={this.props.handlePlay} onPause={this.props.handlePause}
         controls="true" src={track.url} />
-    </div>;
-  }
-});
-
-
-var PlayListTrack = React.createClass({
-  loadTrack: function() {
-    this.props.loadTrack(this.props.index); 
-  },
-  render: function() {
-    return (
-    <li key="{this.props.track.url}" onClick={this.play}>
-      <button onClick={this.props.removeTrack}>Remove</button>&nbsp;
-      <button onClick={this.loadTrack}>Load</button>&nbsp;
-      {this.props.track.title}
-    </li>
-    );
-  }
-});
-
-
-var PlayList = React.createClass({
-  createListItem: function(track, index) {
-    var removeTrack = function(evt) {
-      this.props.removeTrack(index);
-    }.bind(this);
-    return <PlayListTrack key={track.url} track={track} index={index} removeTrack={removeTrack} loadTrack={this.props.loadTrack} />
-  },
-  render: function() {
-    return <div>
-      <ul>{this.props.trackList.map(this.createListItem)}</ul>
     </div>;
   }
 });
