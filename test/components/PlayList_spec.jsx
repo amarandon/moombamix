@@ -21,6 +21,8 @@ describe("PlayList", function() {
     );
     const items = scryRenderedDOMComponentsWithTag(component, 'li');
     expect(items.length).to.equal(2);
+    expect(items[0].textContent).to.contain("First track");
+    expect(items[1].textContent).to.contain("Second track");
   });
   
 });	
